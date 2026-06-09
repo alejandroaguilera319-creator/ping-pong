@@ -68,8 +68,8 @@ reloj = time.Clock()
 
 # Aquí se crearían los grupos de sprites y objetos individuales
 player_1 = Player('nave.png', 40, ALTO - 100, 80, 100, 5)
-player_2 = Player('nave.png', ANCHO - 90, ALTO, 80, 100, 5)
-#pelota =  
+player_2 = Player('nave.png', ANCHO -100, ALTO, 80, 100, 5)
+pelota =  Ball('pelota.png', 30, 50, 40, 60, 5, 5)
 
 
 
@@ -97,15 +97,14 @@ while run:
         # Actualizar posiciones
         player_1.update_p1()
         player_2.update_p2()
-        pelota.update()
+        
         # player.update()
         player_1.reset()
         player_2.reset()
-        pelota.reset()
+        
         # enemies.update()
-
-
-
+        pelota.update()
+        pelota.reset()
 
 
         # Dibujar elementos
